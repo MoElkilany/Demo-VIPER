@@ -14,6 +14,11 @@
 		DB965A35256C258E006E6277 /* QuranProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A34256C258E006E6277 /* QuranProtocol.swift */; };
 		DB965A39256C273E006E6277 /* QuranCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A38256C273E006E6277 /* QuranCell.swift */; };
 		DB965A3C256C287D006E6277 /* Quran+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A3B256C287D006E6277 /* Quran+TableView.swift */; };
+		DB965A3F256C3B68006E6277 /* QuranRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A3E256C3B68006E6277 /* QuranRouter.swift */; };
+		DB965A43256C3BDC006E6277 /* Interactor .swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A42256C3BDC006E6277 /* Interactor .swift */; };
+		DB965A48256C3E95006E6277 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A47256C3E95006E6277 /* Presenter.swift */; };
+		DB965A4D256C46B8006E6277 /* QuranNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A4C256C46B8006E6277 /* QuranNetwork.swift */; };
+		DB965A51256C46F2006E6277 /* QuranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB965A50256C46F2006E6277 /* QuranModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		DB965A34256C258E006E6277 /* QuranProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranProtocol.swift; sourceTree = "<group>"; };
 		DB965A38256C273E006E6277 /* QuranCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranCell.swift; sourceTree = "<group>"; };
 		DB965A3B256C287D006E6277 /* Quran+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Quran+TableView.swift"; sourceTree = "<group>"; };
+		DB965A3E256C3B68006E6277 /* QuranRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranRouter.swift; sourceTree = "<group>"; };
+		DB965A42256C3BDC006E6277 /* Interactor .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Interactor .swift"; sourceTree = "<group>"; };
+		DB965A47256C3E95006E6277 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		DB965A4C256C46B8006E6277 /* QuranNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranNetwork.swift; sourceTree = "<group>"; };
+		DB965A50256C46F2006E6277 /* QuranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,7 @@
 		DB965A0C256C21CF006E6277 /* Demo VIPER */ = {
 			isa = PBXGroup;
 			children = (
+				DB965A4F256C46E3006E6277 /* Model */,
 				DB965A25256C226F006E6277 /* Scence */,
 				DB965A24256C2259006E6277 /* StoryBoard */,
 				DB965A23256C224F006E6277 /* Resources */,
@@ -103,6 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				DB965A2D256C2511006E6277 /* View */,
+				DB965A4B256C468E006E6277 /* Network */,
+				DB965A46256C3E88006E6277 /* Presenter */,
+				DB965A41256C3B8C006E6277 /* Interactor  */,
 				DB965A2E256C251F006E6277 /* Router */,
 				DB965A2C256C2500006E6277 /* Protocol */,
 			);
@@ -130,6 +144,7 @@
 		DB965A2E256C251F006E6277 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				DB965A3E256C3B68006E6277 /* QuranRouter.swift */,
 			);
 			name = Router;
 			sourceTree = "<group>";
@@ -140,6 +155,38 @@
 				DB965A38256C273E006E6277 /* QuranCell.swift */,
 			);
 			name = TableCell;
+			sourceTree = "<group>";
+		};
+		DB965A41256C3B8C006E6277 /* Interactor  */ = {
+			isa = PBXGroup;
+			children = (
+				DB965A42256C3BDC006E6277 /* Interactor .swift */,
+			);
+			name = "Interactor ";
+			sourceTree = "<group>";
+		};
+		DB965A46256C3E88006E6277 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DB965A47256C3E95006E6277 /* Presenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		DB965A4B256C468E006E6277 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB965A4C256C46B8006E6277 /* QuranNetwork.swift */,
+			);
+			name = Network;
+			sourceTree = "<group>";
+		};
+		DB965A4F256C46E3006E6277 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB965A50256C46F2006E6277 /* QuranModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,11 +258,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB965A3F256C3B68006E6277 /* QuranRouter.swift in Sources */,
 				DB965A35256C258E006E6277 /* QuranProtocol.swift in Sources */,
+				DB965A48256C3E95006E6277 /* Presenter.swift in Sources */,
 				DB965A39256C273E006E6277 /* QuranCell.swift in Sources */,
 				DB965A3C256C287D006E6277 /* Quran+TableView.swift in Sources */,
+				DB965A43256C3BDC006E6277 /* Interactor .swift in Sources */,
+				DB965A4D256C46B8006E6277 /* QuranNetwork.swift in Sources */,
 				DB965A12256C21CF006E6277 /* QuranVC.swift in Sources */,
 				DB965A0E256C21CF006E6277 /* AppDelegate.swift in Sources */,
+				DB965A51256C46F2006E6277 /* QuranModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

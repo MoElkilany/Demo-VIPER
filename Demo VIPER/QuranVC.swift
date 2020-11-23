@@ -8,15 +8,18 @@
 import UIKit
 
 class QuranVC: UIViewController {
-
+   
+    
+   weak var presenter: PresenterProtocol?
+    
     let tableList = UITableView()
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         setTableViewConfigration()
+        presenter?.startAPI()
     }
-    
-    
+
     
     func setTableViewConfigration(){
         view.addSubview(tableList)
@@ -34,6 +37,21 @@ class QuranVC: UIViewController {
             tableList.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
+}
 
+
+extension QuranVC : ViewProtocol {
+    
+    func dataGetSucessfully() {
+        self.tableList.reloadData()
+    }
+    
+    func showProgress() {
+        print("Show Progress")
+    }
+    
+    func hiddeProgress() {
+        print("Hidde Progress")
+    }
     
 }

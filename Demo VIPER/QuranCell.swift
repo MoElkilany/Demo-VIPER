@@ -7,7 +7,7 @@
 
 import UIKit
 
-class QuranCell: UITableViewCell {
+class QuranCell: UITableViewCell,SetCellDataProtocol {
     
     static let reuseID = "QuranCell"
     let quranNameLable = UILabel()
@@ -29,6 +29,10 @@ class QuranCell: UITableViewCell {
             quranNameLable.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             quranNameLable.centerXAnchor.constraint(equalTo: self.centerXAnchor),
         ])
+    }
+    
+    func setUpDataCell(quranModel: QuranData) {
+        quranNameLable.text = quranModel.name ?? "" 
     }
     
 }
